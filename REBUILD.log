@@ -1,0 +1,111 @@
+--------------- Rebuild Started: 11/05/2020 15:07:37 Project: LAB7, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\main.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\cymetadata.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\Cm3Start.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\CyBootAsmGnu.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\CyDmac.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\CyFlash.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\CyLib.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\cyPm.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\CySpc.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\cyutils.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\cy_em_eeprom.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\OutMotorLeftSpeed.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\OutMotorLeftDirection.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\OutMotorRightSpeed.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\OutMotorRightDirection.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\UARTCommands.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\UARTCommands_PM.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\UARTCommands_INT.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\UARTCommands_BOOT.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\InterruptCommandReceived.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\UARTCommands_IntClock.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\OutTest.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\MotorControl_DirectionReg.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\MotorControl_DirectionReg_PM.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\MotorControl_Pwm.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\MotorControl_Pwm_PM.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\LAB7.hex"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\LAB7.map"
+Deleting file ".\LAB7.cycdx"
+Deleting file ".\LAB7.svd"
+Deleting file ".\LAB7.rpt"
+Deleting file ".\LAB7_timing.html"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\.deps\SOURCE_C__ARM_GCC_GENERIC.P"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\.deps\SOURCE_ASM__ARM_GCC_GENERIC.P"
+cydsfit.exe -.appdatapath "C:\Users\Koen\AppData\Local\Cypress Semiconductor\PSoC Creator\4.4" -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p "C:\Users\Koen\Documents\PSoC Creator\EM2\LAB7.cydsn\LAB7.cyprj" -d CY8C5888LTI-LP097 -s "C:\Users\Koen\Documents\PSoC Creator\EM2\LAB7.cydsn\Generated_Source\PSoC5" -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
+Elaborating Design...
+HDL Generation...
+Synthesis...
+Tech Mapping...
+Analog Placement...
+Analog Routing...
+Analog Code Generation...
+Digital Placement...
+Digital Routing...
+Bitstream Generation...
+Bitstream Verification...
+Static timing analysis...
+API Generation...
+Dependency Generation...
+Cleanup...
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/main.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c main.c -o .\CortexM3\ARM_GCC_541\Debug\main.o
+main.c: In function 'initMotor':
+main.c:87:5: warning: implicit declaration of function 'PwmMotor_Start' [-Wimplicit-function-declaration]
+     PwmMotor_Start();
+     ^
+main.c: In function 'setMotorSpeeds':
+main.c:132:5: warning: implicit declaration of function 'PwmMotor_WriteCompare1' [-Wimplicit-function-declaration]
+     PwmMotor_WriteCompare1(speeds.leftSpeed);
+     ^
+main.c:133:5: warning: implicit declaration of function 'PwmMotor_WriteCompare2' [-Wimplicit-function-declaration]
+     PwmMotor_WriteCompare2(speeds.rightSpeed);
+     ^
+main.c: In function 'writeStatusRegister':
+main.c:137:5: warning: implicit declaration of function 'ControlRegister_Write' [-Wimplicit-function-declaration]
+     ControlRegister_Write(ControlRegister_Read() | (value & ~mask));
+     ^
+main.c:137:27: warning: implicit declaration of function 'ControlRegister_Read' [-Wimplicit-function-declaration]
+     ControlRegister_Write(ControlRegister_Read() | (value & ~mask));
+                           ^
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/cyfitter_cfg.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\cyfitter_cfg.c -o .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/cymetadata.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\cymetadata.c -o .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/Cm3Start.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\Cm3Start.c -o .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/CyDmac.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\CyDmac.c -o .\CortexM3\ARM_GCC_541\Debug\CyDmac.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/CyFlash.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\CyFlash.c -o .\CortexM3\ARM_GCC_541\Debug\CyFlash.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/CyLib.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\CyLib.c -o .\CortexM3\ARM_GCC_541\Debug\CyLib.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/cyPm.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\cyPm.c -o .\CortexM3\ARM_GCC_541\Debug\cyPm.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/CySpc.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\CySpc.c -o .\CortexM3\ARM_GCC_541\Debug\CySpc.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/cyutils.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\cyutils.c -o .\CortexM3\ARM_GCC_541\Debug\cyutils.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/cy_em_eeprom.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\cy_em_eeprom.c -o .\CortexM3\ARM_GCC_541\Debug\cy_em_eeprom.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/OutMotorLeftSpeed.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\OutMotorLeftSpeed.c -o .\CortexM3\ARM_GCC_541\Debug\OutMotorLeftSpeed.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/OutMotorLeftDirection.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\OutMotorLeftDirection.c -o .\CortexM3\ARM_GCC_541\Debug\OutMotorLeftDirection.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/OutMotorRightSpeed.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\OutMotorRightSpeed.c -o .\CortexM3\ARM_GCC_541\Debug\OutMotorRightSpeed.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/OutMotorRightDirection.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\OutMotorRightDirection.c -o .\CortexM3\ARM_GCC_541\Debug\OutMotorRightDirection.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/UARTCommands.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\UARTCommands.c -o .\CortexM3\ARM_GCC_541\Debug\UARTCommands.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/UARTCommands_PM.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\UARTCommands_PM.c -o .\CortexM3\ARM_GCC_541\Debug\UARTCommands_PM.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/UARTCommands_INT.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\UARTCommands_INT.c -o .\CortexM3\ARM_GCC_541\Debug\UARTCommands_INT.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/UARTCommands_BOOT.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\UARTCommands_BOOT.c -o .\CortexM3\ARM_GCC_541\Debug\UARTCommands_BOOT.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/InterruptCommandReceived.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\InterruptCommandReceived.c -o .\CortexM3\ARM_GCC_541\Debug\InterruptCommandReceived.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/UARTCommands_IntClock.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\UARTCommands_IntClock.c -o .\CortexM3\ARM_GCC_541\Debug\UARTCommands_IntClock.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/OutTest.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\OutTest.c -o .\CortexM3\ARM_GCC_541\Debug\OutTest.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/MotorControl_DirectionReg.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\MotorControl_DirectionReg.c -o .\CortexM3\ARM_GCC_541\Debug\MotorControl_DirectionReg.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/MotorControl_DirectionReg_PM.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\MotorControl_DirectionReg_PM.c -o .\CortexM3\ARM_GCC_541\Debug\MotorControl_DirectionReg_PM.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/MotorControl_Pwm.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\MotorControl_Pwm.c -o .\CortexM3\ARM_GCC_541\Debug\MotorControl_Pwm.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/MotorControl_Pwm_PM.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\MotorControl_Pwm_PM.c -o .\CortexM3\ARM_GCC_541\Debug\MotorControl_Pwm_PM.o
+arm-none-eabi-as.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -alh=.\CortexM3\ARM_GCC_541\Debug/CyBootAsmGnu.lst -g -W -o .\CortexM3\ARM_GCC_541\Debug\CyBootAsmGnu.o Generated_Source\PSoC5\CyBootAsmGnu.s
+arm-none-eabi-ar.exe -rs .\CortexM3\ARM_GCC_541\Debug\LAB7.a .\CortexM3\ARM_GCC_541\Debug\CyDmac.o .\CortexM3\ARM_GCC_541\Debug\CyFlash.o .\CortexM3\ARM_GCC_541\Debug\CyLib.o .\CortexM3\ARM_GCC_541\Debug\cyPm.o .\CortexM3\ARM_GCC_541\Debug\CySpc.o .\CortexM3\ARM_GCC_541\Debug\cyutils.o .\CortexM3\ARM_GCC_541\Debug\cy_em_eeprom.o .\CortexM3\ARM_GCC_541\Debug\OutMotorLeftSpeed.o .\CortexM3\ARM_GCC_541\Debug\OutMotorLeftDirection.o .\CortexM3\ARM_GCC_541\Debug\OutMotorRightSpeed.o .\CortexM3\ARM_GCC_541\Debug\OutMotorRightDirection.o .\CortexM3\ARM_GCC_541\Debug\UARTCommands.o .\CortexM3\ARM_GCC_541\Debug\UARTCommands_PM.o .\CortexM3\ARM_GCC_541\Debug\UARTCommands_INT.o .\CortexM3\ARM_GCC_541\Debug\UARTCommands_BOOT.o .\CortexM3\ARM_GCC_541\Debug\InterruptCommandReceived.o .\CortexM3\ARM_GCC_541\Debug\UARTCommands_IntClock.o .\CortexM3\ARM_GCC_541\Debug\OutTest.o .\CortexM3\ARM_GCC_541\Debug\MotorControl_DirectionReg.o .\CortexM3\ARM_GCC_541\Debug\MotorControl_DirectionReg_PM.o .\CortexM3\ARM_GCC_541\Debug\MotorControl_Pwm.o .\CortexM3\ARM_GCC_541\Debug\MotorControl_Pwm_PM.o .\CortexM3\ARM_GCC_541\Debug\CyBootAsmGnu.o
+arm-none-eabi-ar.exe: creating .\CortexM3\ARM_GCC_541\Debug\LAB7.a
+arm-none-eabi-gcc.exe -Wl,--start-group -o "C:\Users\Koen\Documents\PSoC Creator\EM2\LAB7.cydsn\CortexM3\ARM_GCC_541\Debug\LAB7.elf" .\CortexM3\ARM_GCC_541\Debug\main.o .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o .\CortexM3\ARM_GCC_541\Debug\cymetadata.o .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o .\CortexM3\ARM_GCC_541\Debug\LAB7.a "C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CortexM3\ARM_GCC_541\Debug\CyComponentLibrary.a" -mcpu=cortex-m3 -mthumb -l m -L Generated_Source\PSoC5 -Wl,-Map,.\CortexM3\ARM_GCC_541\Debug/LAB7.map -T Generated_Source\PSoC5\cm3gcc.ld -specs=nano.specs -Wl,--gc-sections -g -ffunction-sections -Og -ffat-lto-objects -Wl,--end-group
+.\CortexM3\ARM_GCC_541\Debug\main.o: In function `initMotor':
+C:\Users\Koen\Documents\PSoC Creator\EM2\LAB7.cydsn/main.c:87: undefined reference to `PwmMotor_Start'
+.\CortexM3\ARM_GCC_541\Debug\main.o: In function `writeStatusRegister':
+C:\Users\Koen\Documents\PSoC Creator\EM2\LAB7.cydsn/main.c:137: undefined reference to `ControlRegister_Read'
+C:\Users\Koen\Documents\PSoC Creator\EM2\LAB7.cydsn/main.c:137: undefined reference to `ControlRegister_Write'
+.\CortexM3\ARM_GCC_541\Debug\main.o: In function `setMotorSpeeds':
+C:\Users\Koen\Documents\PSoC Creator\EM2\LAB7.cydsn/main.c:132: undefined reference to `PwmMotor_WriteCompare1'
+C:\Users\Koen\Documents\PSoC Creator\EM2\LAB7.cydsn/main.c:133: undefined reference to `PwmMotor_WriteCompare2'
+collect2.exe: error: ld returned 1 exit status
+The command 'arm-none-eabi-gcc.exe' failed with exit code '1'.
+--------------- Rebuild Failed: 11/05/2020 15:07:52 ---------------
